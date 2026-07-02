@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', config('app.name') . ' — Сократите ссылку')
+@section('title', config('app.name'))
 
 @section('content')
 <main class="main">
