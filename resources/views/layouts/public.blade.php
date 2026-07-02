@@ -109,13 +109,16 @@
             align-items: center;
         }
 
-        /* Main layout */
+        .nav {
             display: flex;
             gap: 0.5rem;
             align-items: center;
         }
 
         .nav a {
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
             color: var(--muted);
             text-decoration: none;
             font-size: 0.9rem;
@@ -141,6 +144,36 @@
         .nav a.nav-cta:hover {
             background: #5aedcf;
             box-shadow: 0 0 24px var(--accent-glow);
+        }
+
+        .nav-logout-form {
+            display: contents;
+            margin: 0;
+        }
+
+        .nav-logout {
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: inherit;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        .nav-logout:hover {
+            color: var(--danger);
+            background: var(--danger-bg);
+            border-color: rgba(255, 107, 122, 0.3);
         }
 
         /* Main layout */
@@ -483,6 +516,10 @@
                     <nav class="nav">
                         @auth
                             <a href="{{ url('/admin') }}">Кабинет</a>
+                            <form method="POST" action="{{ url('/admin/logout') }}" class="nav-logout-form">
+                                @csrf
+                                <button type="submit" class="nav-logout">Выйти</button>
+                            </form>
                         @else
                             <a href="{{ url('/admin/login') }}">Войти</a>
                             <a href="{{ url('/admin/register') }}" class="nav-cta">Регистрация</a>
