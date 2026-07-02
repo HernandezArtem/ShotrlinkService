@@ -1,0 +1,120 @@
+.shortlink-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.shortlink-logo__mark {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(46, 230, 197, 0.2);
+    line-height: 0;
+}
+
+.shortlink-logo__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shortlink-logo__text {
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.shortlink-logo__accent {
+    color: #2ee6c5;
+}
+
+/* Public site — тёмный фон */
+.shortlink-logo--dark .shortlink-logo__text {
+    color: #eef1f6;
+}
+
+.shortlink-logo--dark .shortlink-logo__accent {
+    color: #2ee6c5;
+}
+
+/* Filament auth — светлая карточка */
+.shortlink-logo--light .shortlink-logo__text {
+    color: #0f172a;
+}
+
+.shortlink-logo--light .shortlink-logo__accent {
+    color: #0da28a;
+}
+
+/* Filament sidebar / topbar — светлая и тёмная тема панели */
+.shortlink-logo--filament .shortlink-logo__text {
+    color: rgb(3 7 18);
+}
+
+.shortlink-logo--filament .shortlink-logo__accent {
+    color: #0da28a;
+}
+
+.dark .shortlink-logo--filament .shortlink-logo__text {
+    color: #fff;
+}
+
+.dark .shortlink-logo--filament .shortlink-logo__accent {
+    color: #2ee6c5;
+}
+
+.fi-logo .shortlink-logo {
+    height: 100%;
+}
+
+/* Двухцветный подзаголовок на формах входа / регистрации */
+.shortlink-auth-subheading {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.shortlink-auth-subheading__muted {
+    color: rgb(107 114 128);
+}
+
+.dark .shortlink-auth-subheading__muted {
+    color: rgb(156 163 175);
+}
+
+.shortlink-auth-subheading a {
+    color: #0da28a !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.shortlink-auth-subheading a:hover {
+    color: #0f8270 !important;
+    text-decoration: underline;
+}
+
+.dark .shortlink-auth-subheading a {
+    color: #2ee6c5 !important;
+}
+
+.dark .shortlink-auth-subheading a:hover {
+    color: #6ee9d6 !important;
+}
+
+/* Подвал и заголовки с брендом */
+.shortlink-brand-text {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.shortlink-brand-text__accent {
+    color: #2ee6c5;
+}
