@@ -163,7 +163,7 @@ php artisan migrate
 Данные хранятся в файле:
 
 ```
-database/database.sqlite
+database/youName.sqlite
 ```
 
 Просмотр через HeidiSQL (Laragon): **File → New session → SQLite** → указать путь к файлу.
